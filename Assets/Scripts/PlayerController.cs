@@ -1,17 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerController : VehicleController
 {
     [SerializeField] int rotateSpeed;
-    GameManager gameManager;
     [SerializeField] Text endLevelText;
-    private void Update()
-    {
-        gameManager = GetComponent<GameManager>();
-    }
     static int health = 1;
     public static int Health  //ENCAPSULATION
     {
@@ -38,5 +30,6 @@ public class PlayerController : VehicleController
     public void EndLevel()
     {
         endLevelText.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 }

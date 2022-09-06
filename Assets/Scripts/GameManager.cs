@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrefabs;
     [SerializeField] int startDelay;
     [SerializeField] int spawnInterval;
     [SerializeField] Text gameOverText;
-    //[SerializeField] Text endLevelText;
     static int spawnRangeX = 5;
     static int spawnZ = 195;
     bool isGameActive;
